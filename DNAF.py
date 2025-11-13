@@ -1,5 +1,3 @@
-# Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
-# .\.venv\Scripts\activate
 import numpy as np
 import mss
 import cv2
@@ -11,8 +9,9 @@ import ctypes
 import ctypes
 import time
 import pydirectinput
-import os
-
+import os 
+# Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+# .\.venv\Scripts\activate 
 # Constants
 PUL = ctypes.POINTER(ctypes.c_ulong)
 
@@ -167,8 +166,8 @@ print("Program started.")
 # Create keyboard controller
 keyboard = Controller()
 
-# area = "sewers"
-area = "purgatorio"
+area = "sewers"
+# area = "purgatorio"
 # area = "island"
 
 state = "waiting"
@@ -571,6 +570,8 @@ with mss.mss() as sct:
                     try:
                         full_screen = np.array(sct.grab(monitor))
                         if gotAFish(full_screen, gotAFishImage):
+                            #wait 1 second to ensure the UI is fully up
+                            time.sleep(1)
                             print("Detected GOT A FISH -> returning to waiting state")
                             # press space to collect / close the UI
                             try:
