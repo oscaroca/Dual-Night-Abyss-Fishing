@@ -2,7 +2,8 @@
 
 Automated basic fishing helper for a game. Use at your own responsibility — running automation may violate game rules and can result in account penalties or bans.
 
-## Contents
+## Contents![DNAF-img](https://github.com/user-attachments/assets/a2840dca-3f23-48be-8014-4368b4629087)
+
 - DNAF.py
 - area folders: `sewers/`, `purgatorio/`, `island/` (each must contain reference images)
 
